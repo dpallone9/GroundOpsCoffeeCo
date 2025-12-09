@@ -1,0 +1,229 @@
+body{
+background-color: lightslategray;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+background-image: url('Coffee-bean-Background.jpg');
+}
+a {
+color: black;
+text-decoration: none;
+padding: 14px 20px;
+}
+
+h1 {
+color: saddlebrown;
+font-size: 70px;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+margin-top: 20px;
+}
+h2 {
+color: white;
+font-family: 'Times New Roman', Times, serif;
+padding-top: 40px;
+
+font-size: 40px;
+color: rgb(215, 166, 103);
+text-align: center;
+}
+h3 {
+color: black;
+font-family: 'Times New Roman', Times, serif;
+font-style: bold;
+}
+.button {
+background-color: rgb(122, 60, 16);
+border: 4px solid black;
+border-radius: 12px;
+color: white;       
+padding: 10px 24px;
+}
+
+
+
+.mission {
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+.navbar {
+overflow: hidden;
+background-color: #333;
+padding: 20px 0;        /* controls top and bottom spacing */
+max-width: 1600px;   /* controls how narrow the navbar becomes */
+margin: 0 auto;     /* centers the navbar with space on sides */    
+}
+
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.navbar a:hover{
+background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flexbox Container */
+.container {
+  display: flex; /* enables flexbox layout */
+  flex-wrap: nowrap; /* allows items to wrap to next line */
+  justify-content: center; /* centers items horizontally */
+  padding: 20px;
+  gap: 20px;
+}
+/* Flexbox img layout */
+.container img{
+  width: 200px; /* same width for all pictures */
+  height: 150px; /* same height for all pictures */
+  object-fit: cover;  /* crops so it fits perfectly in felx box*/
+  margin: 30px;
+}
+/* Flexbox div layout */
+.container div{
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+}
+.container div p{
+  background-color: lightslategray; 
+  color: black;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-bottom: 12px; /* space between text and image */
+  text-align: center;
+  border-radius: 12px;
+ margin: -20px;
+}
+
+
+
+
+
+
+
+.header {
+  background-image: url('Stain.jpg');
+  background-repeat: repeat;
+  background-size: 350px;
+  padding: 20px 0;        /* controls top and bottom spacing */
+  max-width: 1600px;   /* controls how narrow the header becomes */
+  margin: 0 auto;     /* centers the header with space on sides */
+
+  /* Grid layout for header */
+  display: grid;
+ grid-template-columns: 1fr auto; /* two columns: title and logo */
+ align-items: center;              /* vertically center items */
+
+}
+.header h4 {
+  margin-top: -40px;
+  text-align: center;
+  color: saddlebrown;
+}
+
+.banner h2 {
+  margin-top: 0;
+}
+
+.banner {
+background-color: darkolivegreen;
+color: white;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+font-size: 25px;
+  max-width: 1600px;   /* controls how narrow the banner becomes */
+  margin: 0 auto;     /* centers the banner with space on sides */
+}
+.contact-section {
+text-align: left;
+margin-left: 20px;
+}
+
+.top-right {
+  max-width: 120px;   /* make the logo scale nicely */
+  height: auto;
+}
+.footer a{
+color: white;
+font-family: 'Times New Roman', Times, serif;
+}
+
+/* Contact Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  color: black; 
+}
+
+
+
+form button {
+  background-color: #8B5E34; /* coffee brown */
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+}
+
+form button:hover {
+  background-color: #704a29;
+}
+.panel {
+  background-color: rgba(131, 40, 40, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+.panel > li {
+  list-style: none;   /* removes bullet from main categories */
+}
+.panel ul {
+
+  text-align: left; 
+}
