@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Ground Ops Coffee Co.</title>
+<link rel="stylesheet" href="Home.css">
+
+
+</head>
+
+<body>
+   
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="About-us.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="services.html">Support Services</a>
+</div>
+
+<div class="header">
+
+ <h1>Ground Ops Coffee Co.</h1>
+<IMG src="Logo.png" alt="Ground Ops Coffee Logo" class="top-right">
+<h4>by Dominic Pallone</h4>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner">
+ 
+
+    <h2>Contact</h2>
+  <div class="container">
+
+  <div>
+  <div class="contact-section">
+
+  <h3>We'd love to hear from you!</h3>
+
+  <p>Whether you're asking about orders, wholesale<br>inquiries, Ground Ops Coffee Co. is always<br>ready to connect.</p>
+
+  <h4>Hours</h4>
+
+<p class ="mission">Monday - Friday: 8 AM - 5 PM</p>
+<p class ="mission">Saturday - Sunday: 8 AM - 12 PM</p>
+</div>
+
+  </div>
+  <div>
+<h5>Contact Information</h5>
+<p>Email: contact@groundopscoffee.com</p>
+<p>Phone: (555) 123-4567</p>
+<p>Location: Boston, MA</p>
+</div>
+
+
+
+
+
+
+</div>
+<form class="contact-form" onsubmit="return validateForm()">
+
+ 
+
+  <label>First Name *</label>
+  <input type="text" id="firstName">
+  <span id="firstNameError"></span>
+
+  <label>Last Name *</label>
+  <input type="text" id="lastName">
+  <span id="lastNameError"></span>
+
+  <label>City *</label>
+  <input type="text" id="city">
+  <span id="cityError"></span>
+
+  <label>ZIP *</label>
+  <input type="text" id="zip">
+  <span id="zipError"></span>
+
+  <label>Email *</label>
+  <input type="text" id="email">
+  <span id="emailError"></span>
+
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script>
+  function validateForm() {
+    let isValid = true;
+
+    // Clear previous errors
+    document.getElementById("firstNameError").innerHTML = "";
+    document.getElementById("lastNameError").innerHTML  = "";
+    document.getElementById("cityError").innerHTML      = "";
+    document.getElementById("zipError").innerHTML       = "";
+    document.getElementById("emailError").innerHTML     = "";
+
+    // Get values
+    let firstName = document.getElementById("firstName").value.trim();
+    let lastName  = document.getElementById("lastName").value.trim();
+    let city      = document.getElementById("city").value.trim();
+    let zip       = document.getElementById("zip").value.trim();
+    let email     = document.getElementById("email").value.trim();
+
+    // Helper: Proper Case (first letter uppercase, rest lowercase)
+    function properCase(text) {
+      if (text === "") return "";
+      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    }
+
+    // A) Required checks + auto-convert capitalization
+    if (firstName === "") {
+      document.getElementById("firstNameError").innerHTML = "First name is required.";
+      isValid = false;
+    } else {
+      document.getElementById("firstName").value = properCase(firstName);
+    }
+
+    if (lastName === "") {
+      document.getElementById("lastNameError").innerHTML = "Last name is required.";
+      isValid = false;
+    } else {
+      document.getElementById("lastName").value = properCase(lastName);
+    }
+
+    if (city === "") {
+      document.getElementById("cityError").innerHTML = "City is required.";
+      isValid = false;
+    } else {
+      document.getElementById("city").value = properCase(city);
+    }
+
+    // B) ZIP validation: 12345 OR 12345-6789
+    let zipRegex = /^\d{5}(-\d{4})?$/;
+    if (zip === "") {
+      document.getElementById("zipError").innerHTML = "ZIP code is required.";
+      isValid = false;
+    } else if (!zipRegex.test(zip)) {
+      document.getElementById("zipError").innerHTML = "ZIP must be 12345 or 12345-6789.";
+      isValid = false;
+    }
+
+    // C) Email validation
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (email === "") {
+      document.getElementById("emailError").innerHTML = "Email is required.";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("emailError").innerHTML = "Invalid email format (ex: name@email.com).";
+      isValid = false;
+    }
+
+
+
+    // D) Final feedback
+    if (isValid) {
+      alert("Success! Your form is valid.");
+    }
+
+    return isValid; // controls submission
+  }
+</script>
+
+</div>
+
+
+
+<footer class= "footer">
+    <small><i>Copyright © 2025 Ground Ops Coffee Co. | Veteran Owned and Operated</i></small><br>
+    <small><i><a href="mailto:pallone.d@northeastern.edu">Dominic@Pallone.com</a></i></small>
+  </footer>
+
+</body>
+</html>
